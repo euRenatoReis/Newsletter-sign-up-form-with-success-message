@@ -1,0 +1,285 @@
+:root {
+
+    --verificado: hsl(4, 100%, 67%);
+    --btFonteEFundo: hsl(234, 29%, 20%);
+    --inputNeutro: hsl(235, 18%, 26%);
+    --fonteMenores: hsl(231, 7%, 60%);
+    --fundoSection: hsl(0, 0%, 100%);
+
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    background-color: var(--btFonteEFundo);
+    font-family: 'Roboto-Bold';
+}
+
+
+p {
+
+    font-size: 16px;
+
+}
+
+
+.entry-section {
+    display: none;
+}
+
+.entry-section.on {
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--fundoSection);
+    border-radius: 20px;
+    height: 600px;
+    width: 800px;
+    padding: 50px;
+    gap: 5px;
+
+}
+
+.entry {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.information {
+
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    padding: 10px;
+    flex-wrap: wrap;
+
+}
+
+.information ul {
+
+    list-style: url(../assets/images/icon-list.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    gap: 0px;
+
+
+}
+
+.information ul li {
+
+    width: 90%;
+    height: 32px;
+    align-items: end;
+}
+
+.inputs {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 0px;
+    height: 150px;
+    gap: 8px;
+}
+
+.input-alerts {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    height: 30px;
+
+}
+
+.alert {
+    display: none;
+}
+
+.alert.on {
+
+    color: var(--verificado);
+    display: flex;
+}
+
+.email-entry,
+.bt-submit {
+
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    outline: 1px var(--fonteMenores);
+    caret-color: 1px var(--fonteMenores);
+}
+
+.email-entry {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+
+}
+
+.email-entry.error {
+
+    background-color: var(--verificado);
+    color: var(--verificado);
+    outline: var(--verificado);
+
+}
+
+
+.bt-submit {
+
+    background-color: var(--btFonteEFundo);
+    color: var(--fundoSection);
+}
+
+.bt-submit:hover{ background-color: var(--verificado);}
+
+.tiny-icon {
+
+    background-image: url(../assets/images/icon-success.svg);
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    border-radius: 40px;
+}
+
+.image {
+
+    display: flex;
+    width: 400px;
+    background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+
+}
+
+.sucess-section {
+
+    display: none;
+}
+
+.sucess-section.on {
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--fundoSection);
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.dismiss-submit {
+
+    display: flex;
+    height: 50px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.dismiss-submit:hover {
+
+    background-color: var(--verificado);
+}
+
+.picture-mobile {
+
+    display: none;
+}
+
+
+@media(max-width: 375px) {
+
+
+    body {
+
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        gap: 20px;
+    }
+
+    .entry-section.on {
+
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        height: 700px;
+        padding: 0px;
+        border-radius: 0px;
+    }
+
+    .picture-mobile {
+
+        display: block;
+        background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+        background-position: center;
+        background-size: cover;
+        width: 375px;
+        height: 300px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .entry {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .information {
+
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+    }
+
+    .information ul {
+
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .inputs {
+
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+    }
+
+    .sucess-section.on {
+
+        height: 100%;
+    }
+
+    .dismiss-submit{
+
+        margin-top: 320px;
+    }
+
+}
